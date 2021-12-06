@@ -9,8 +9,9 @@ type Solution = {
 async function exec(day: number): Promise<void> {
   const solution = solutions[day - 1];
 
-  if (solution === undefined)
+  if (solution === undefined) {
     throw new Error(`No solution found for day: ${day}`);
+  }
 
   const input = await readInput(day);
   console.log(`Day ${day}:`, solution.part1(input), solution.part2(input));
