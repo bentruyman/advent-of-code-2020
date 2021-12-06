@@ -1,3 +1,5 @@
+import * as day1 from "./solution/day1.ts";
+
 type SolutionPart = (input: string) => number;
 type Solution = {
   part1: SolutionPart;
@@ -22,7 +24,7 @@ async function readInput(day: number): Promise<string> {
 }
 
 const day = parseInt(Deno.args[0]);
-const solutions: Solution[] = [];
+const solutions: Solution[] = [day1];
 
 if (isNaN(day)) {
   for (let index = 1; index <= solutions.length; index++) {
